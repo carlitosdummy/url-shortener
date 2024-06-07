@@ -6,7 +6,7 @@ This is a simple and efficient URL shortener built with React and Vite. It's des
 
 ## Quick Usage
 
-If you want to use the application quickly without installing it locally, you can visit the live version of the application at [yourwebsite.com](http://yourwebsite.com).
+If you want to use the application quickly without installing it locally, you can visit the live version of the application [here](https://dummy-url-shortener.netlify.app/).
 
 ## Features
 
