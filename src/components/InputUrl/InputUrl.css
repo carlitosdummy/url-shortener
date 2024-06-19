@@ -1,0 +1,37 @@
+.url-section {
+  background: var(--background-color);
+  border-radius: 5px;
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.url-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 30px;
+
+  span {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--sec-orange);
+  }
+}
+
+.url-input-btn {
+  display: flex;
+  gap: 1rem;
+
+  .url-input {
+    font-size: 1.8rem;
+    padding-left: .5rem;
+    width: 35rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+  }
+}

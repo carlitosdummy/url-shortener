@@ -1,13 +1,13 @@
-import { useState, useCallback } from 'react'
+import { useState } from 'react'
 
 import { useGetShortUrl } from './hooks/useGetShortUrl'
 import { useClipboard } from './hooks/useClipboard'
 import { useResetOnTab } from './hooks/useReset'
 
-import { Footer } from './components/Footer'
+import { Footer } from './components/Footer/Footer'
+import { InputUrl } from './components/InputUrl/InputUrl'
 
 import './App.css'
-import { UrlButtons } from './components/UrlButtons'
 
 function App () {
   const [url, setUrl] = useState('')
@@ -21,47 +21,29 @@ function App () {
 
   const handleChange = (event) => setUrl(event.target.value)
 
-  const reset = useCallback(() => {
+  const reset = () => {
     setUrl('')
     resetCopy()
     setShortUrl('')
-  }, [])
+  }
 
   useResetOnTab(shortUrl, reset)
 
   return (
     <main>
       <h1 className='title'>URL SHORTENER</h1>
-      <section className='url-section'>
-        <form
-          onSubmit={onSubmit}
-          className='url-form'
-        >
-          <label className='url-label'>
-            {
-              shortUrl
-                ? <span>Shorter URL</span>
-                : <span>Enter URL</span>
-            }
-            <div className='url-input-btn'>
-              <input
-                onChange={handleChange}
-                className='url-input'
-                type='text'
-                placeholder='https://github.com/carlitosdummy/url-shortener'
-                value={shortUrl !== '' ? shortUrl : url}
-              />
-              {
-                shortUrl !== ''
-                  ? <UrlButtons copy={copy} copyToClipboard={copyToClipboard} shortUrl={shortUrl} text='Copy URL' />
-                  : <UrlButtons copy={false} text='Generate' />
-              }
-
-            </div>
-          </label>
-        </form>
-      </section>
-      <Footer shortUrl={shortUrl} loading={loading} />
+      <InputUrl
+        onSubmit={onSubmit}
+        shortUrl={shortUrl}
+        handleChange={handleChange}
+        url={url}
+        copy={copy}
+        copyToClipboard={copyToClipboard}
+      />
+      <Footer
+        shortUrl={shortUrl}
+        loading={loading}
+      />
     </main>
   )
 }

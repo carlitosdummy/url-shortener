@@ -1,4 +1,3 @@
-
 main {
   width: 100%;
   height: 100vh;
@@ -14,81 +13,4 @@ main {
   color: var(--green);
   font-weight: 900;
   margin-top: -5rem;
-}
-
-.url-section {
-  background: var(--background-color);
-  border-radius: 5px;
-  padding: 2.2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.url-label {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: start;
-  gap: 30px;
-
-  span {
-    font-size: 4rem;
-    font-weight: 600;
-    color: var(--sec-orange);
-  }
-}
-
-.url-input-btn {
-  display: flex;
-  gap: 1rem;
-
-  .url-input {
-    font-size: 1.8rem;
-    padding-left: .5rem;
-    width: 35rem;
-    height: 3rem;
-    border-radius: 10px;
-    border: none;
-  }
-
-  .url-btn {
-    font-family: "VT323", monospace;
-    background: var(--sec-orange);
-    color: var(--white);
-    font-size: 1.5rem;
-    padding: 0rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: box-shadow 200ms ease;
-
-  }
-
-  .url-btn:hover {
-    box-shadow: 0px 0px 7px var(--black);
-  }
-}
-
-#instructions {
-  opacity: 1;
-  transition: opacity 0.3s ease, height 0.3s ease;
-  letter-spacing: 1px;
-  margin-left: 1px;
-  color: var(--white);
-  font-size: 1.5rem;
-
-  & #key-tap {color: var(--sec-orange);}
-}
-
-.show {
-  animation: blink 1s infinite;
-}
-
-
-@keyframes blink {
-  0% {opacity: 0;}
-  50% {opacity: 1;}
-  100% {opacity: 0;}
 }

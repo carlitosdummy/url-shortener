@@ -1,0 +1,16 @@
+.url-btn {
+  font-family: "VT323", monospace;
+  background: var(--sec-orange);
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 0rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 200ms ease;
+
+}
+
+.url-btn:hover {
+  box-shadow: 0px 0px 7px var(--black);
+}

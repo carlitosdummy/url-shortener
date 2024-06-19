@@ -1,3 +1,5 @@
+import './UrlButtons.css'
+
 export const UrlButtons = ({ copy, copyToClipboard, shortUrl, text }) => {
   return (
     <button

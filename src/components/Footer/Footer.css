@@ -1,0 +1,21 @@
+#instructions {
+  opacity: 1;
+  transition: opacity 0.3s ease, height 0.3s ease;
+  letter-spacing: 1px;
+  margin-left: 1px;
+  color: var(--white);
+  font-size: 1.5rem;
+
+  & #key-tap {color: var(--sec-orange);}
+}
+
+.show {
+  animation: blink 1s infinite;
+}
+
+
+@keyframes blink {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 0;}
+}
