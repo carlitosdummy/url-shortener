@@ -4,6 +4,7 @@ import { useState } from 'react'
 export const useGetShortUrl = (url) => {
   const [shortUrl, setShortUrl] = useState('')
   const [loading, setLoading] = useState(false)
+
   const options = {
     method: 'POST',
     headers: {
@@ -26,5 +27,7 @@ export const useGetShortUrl = (url) => {
       })
   }
 
-  return { shortUrl, setShortUrl, getNewUrl, loading }
+  const resetShortUrl = () => setShortUrl('')
+
+  return { shortUrl, resetShortUrl, getNewUrl, loading }
 }

@@ -11,7 +11,7 @@ import './App.css'
 
 function App () {
   const [url, setUrl] = useState('')
-  const { shortUrl, setShortUrl, getNewUrl, loading } = useGetShortUrl(url)
+  const { shortUrl, resetShortUrl, getNewUrl, loading } = useGetShortUrl(url)
   const { copy, copyToClipboard, resetCopy } = useClipboard()
 
   const onSubmit = (event) => {
@@ -24,7 +24,7 @@ function App () {
   const reset = () => {
     setUrl('')
     resetCopy()
-    setShortUrl('')
+    resetShortUrl()
   }
 
   useResetOnTab(shortUrl, reset)

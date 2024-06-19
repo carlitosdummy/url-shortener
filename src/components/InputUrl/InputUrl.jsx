@@ -10,10 +10,10 @@ export const InputUrl = ({ onSubmit, shortUrl, handleChange, url, copy, copyToCl
       >
         <label className='url-label'>
           {
-              shortUrl
-                ? <span>Shorter URL</span>
-                : <span>Enter URL</span>
-            }
+            shortUrl
+              ? <span>Shorter URL</span>
+              : <span>Enter URL</span>
+          }
           <div className='url-input-btn'>
             <input
               onChange={handleChange}
